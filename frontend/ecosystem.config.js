@@ -7,6 +7,7 @@ const {
   DEPLOY_HOST,
   DEPLOY_REPO,
   DEPLOY_PATH,
+  DEPLOY_REF,
 } = process.env;
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
     production: {
       user: DEPLOY_USER,
       host: DEPLOY_HOST,
-      ref: 'origin/main',
+      ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
       'pre-deploy-local': '',
